@@ -2,20 +2,22 @@ import csv
 import random
 
 def organize_movie_file(filename):
-    list = []
     with open(filename, newline='') as csvfile:
         moviereader = csv.DictReader(csvfile)
+        movielist = []
         for row in moviereader:
-            list.append(row['Title']) 
-    return list 
-        
-# Can add other categories later - Version 2!
-# 'Year: ', row['Year'], 'Other notes: ', row['Other notes:'])
+            row = (row['Title'], ' | ',row['Category'], ' | ',row['Year'],' | ',row['Other Notes'])
+            item = ''.join(row)
+            movielist.append(item)
+        return movielist
 
-movielist = organize_movie_file('sm_movie_list.csv')
+#print(organize_movie_file('sm_movie_list.csv'))
+
+organizedmovielist = organize_movie_file('sm_movie_list.csv')
 
 def pick_three_movies(list):
     return(random.sample(list, 3))
 
 #print(movielist)
-#print(pick_three_movies(movielist))
+
+print(pick_three_movies(organizedmovielist))
