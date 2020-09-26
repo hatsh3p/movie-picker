@@ -1,6 +1,5 @@
 from flask import Flask
-from pick_three_movies_v2 import organize_movie_file 
-from pick_three_movies_v2 import pick_three_movies
+from pick_three_movies import pick_three_unwatched_movies
 
 
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
@@ -10,9 +9,8 @@ app = Flask(__name__)
 @app.route('/')
 def display_three_movies():
     """Return a friendly HTTP greeting."""
-    movielist = organize_movie_file('sm_movie_list.csv')
-    threemovies = pick_three_movies(movielist)
-    return '<ol>' + ''.join(map(lambda m: '<li>' + m + '</li>', threemovies)) + '</ol>'
+    pick_three_unwatched_movies()
+    return 
 
 
 @app.route('/boop')

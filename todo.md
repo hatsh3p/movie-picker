@@ -1,14 +1,18 @@
-*Last updated:       September 18, 2020*
+*Last updated:       September 26, 2020*
 
 **Current features:**
 - Program imports CSV file
-- CSV file can be updated
-- Information about all three movies is displaye
+- CSV file is filtered to check for watched movies
+- A new list of unwatched movies is generated
+- Three movies are chosen randomly
+- Information about all three movies is displayed
 
 **Features to add:**
+- Import a live CSV file
 - Only display the information contained in the file (skip blank cells)
 - Change UI from Times New Roman 10pt to something more user friendly
 - Allow user to veto a movie one at a time
+- Host movie picker on amarragy.com/movie-picker
 
 **Advanced features to add:**
 - Allow users to enter a link to use as a live spreadsheet
