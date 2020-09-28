@@ -44,7 +44,7 @@ def filter_list_of_unwatched_movies(list):
     elif num_filter == '7':
        filter = 'Documentary'
     elif num_filter == '8':
-        filter = 'Film Noir' or 'Foreign' or 'Other'
+        filter = 'Film Noir' or 'Foreign' or 'Anime' or 'Independent' or 'Thriller' or 'Courtroom Drama' or'Other'
     else:
         print('Invalid selection.')
     
